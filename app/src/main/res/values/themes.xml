@@ -1,0 +1,23 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- 🌙 Thème sombre bleu (Material 3) -->
+    <style name="Theme.SNCFFinal" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/blue_500</item>
+        <item name="colorPrimaryVariant">@color/blue_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/blue_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <!-- ✅ Ajout des couleurs pour Material 3 -->
+        <item name="colorSurface">@color/black</item>
+        <item name="colorOnSurface">@color/white</item>
+        <item name="android:colorBackground">@color/black</item>
+
+        <!-- ✅ Assure une bonne lisibilité -->
+        <item name="colorSurfaceVariant">@color/blue_700</item>
+        <item name="colorOnSurfaceVariant">@color/white</item>
+
+        <!-- ✅ Personnalisation de la barre de statut et navigation -->
+        <item name="android:statusBarColor">@color/blue_700</item>
+        <item name="android:navigationBarColor">@color/black</item>
+    </style>
+</resources>

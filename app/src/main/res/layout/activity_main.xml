@@ -1,0 +1,157 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1E1E1E"
+    android:padding="16dp">
+
+    <!-- Carte Material pour les champs de texte -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        android:layout_marginBottom="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxBackgroundMode="none"
+                android:hint="Départ"
+                app:startIconDrawable="@drawable/adobe_express_file"
+                app:startIconTint="@color/white"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteDepart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:inputType="text"
+                    android:textColorHint="@android:color/darker_gray"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginBottom="12dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxBackgroundMode="none"
+                android:hint="Arrivée"
+                app:startIconDrawable="@drawable/adobe_express_file"
+                app:startIconTint="@color/white"
+                android:layout_marginBottom="12dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteArrivee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:inputType="text"
+                    android:textColorHint="@android:color/darker_gray"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+    <!-- Ligne Date & Heure -->
+    <LinearLayout
+        android:id="@+id/dateTimeContainer"
+        android:layout_width="395dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/cardSearch"
+        android:layout_marginTop="42dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSelectDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/white"
+            android:elevation="4dp"
+            android:paddingVertical="10dp"
+            android:text="Date"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:cornerRadius="12dp"
+            app:icon="@drawable/ic_calendar"
+            app:iconGravity="start"
+            app:iconPadding="8dp"
+            app:iconTint="@color/black" />
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSelectTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/white"
+            android:elevation="4dp"
+            android:paddingVertical="10dp"
+            android:text="Heure"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:cornerRadius="12dp"
+            app:icon="@drawable/ic_clock"
+            app:iconGravity="start"
+            app:iconPadding="8dp"
+            app:iconTint="@color/black" />
+    </LinearLayout>
+
+    <!-- Bouton Recherche (Maintenant sous Date & Heure) -->
+    <Button
+        android:id="@+id/btnRecherche"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rechercher"
+        android:layout_below="@id/dateTimeContainer"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/blue_500"
+        android:textColor="@android:color/white"/>
+
+    <VideoView
+        android:id="@+id/videoBackground"
+        
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:scaleType="centerCrop"/>
+
+
+    <ImageButton
+        android:id="@+id/btnSwap"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:backgroundTint="@color/blue_700"
+        android:tint="@android:color/white"
+        android:elevation="8dp"
+        android:src="@drawable/ic_swap"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"/>
+
+</RelativeLayout>
